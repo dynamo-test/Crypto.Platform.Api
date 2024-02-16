@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  crypto.platform.api:
+    image: ${DOCKER_REGISTRY-}crypto.platform.api
+    ports:
+      - 30001:443
+    build:
+      context: .
+      dockerfile: Crypto.Platform.Api/Dockerfile
